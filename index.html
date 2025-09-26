@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performing Alignment - Thesis One-Pager</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            background: #fafaf8;
+            padding: 40px 20px;
+            color: #1a1a1a;
+            line-height: 1.65;
+        }
+        
+        .container {
+            max-width: 750px;
+            margin: 0 auto;
+            background: white;
+            padding: 48px;
+            border: 1px solid #e8e6e1;
+        }
+        
+        .header {
+            border-bottom: 1px solid #e8e6e1;
+            padding-bottom: 28px;
+            margin-bottom: 32px;
+        }
+        
+        .title {
+            font-size: 2.2em;
+            font-weight: 500;
+            color: #2d2d2d;
+            margin-bottom: 14px;
+            letter-spacing: -0.02em;
+        }
+        
+        .subtitle {
+            font-size: 1em;
+            color: #6b6b6b;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+        
+        .section {
+            margin-bottom: 28px;
+        }
+        
+        .section-title {
+            font-size: 0.85em;
+            color: #8b7355;
+            font-weight: 600;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+        
+        .section-content {
+            color: #3d3d3d;
+            font-size: 0.95em;
+        }
+        
+        .research-question {
+            background: #f5f4f0;
+            padding: 20px 24px;
+            margin: 26px 0;
+            border-left: 2px solid #c9b8a3;
+            font-style: italic;
+            color: #2d2d2d;
+            font-size: 0.98em;
+        }
+        
+        .columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 16px;
+        }
+        
+        .column-item {
+            padding: 16px;
+            background: #fafaf8;
+            border: 1px solid #e8e6e1;
+        }
+        
+        .column-title {
+            font-weight: 600;
+            color: #2d2d2d;
+            margin-bottom: 8px;
+            font-size: 0.9em;
+        }
+        
+        .column-text {
+            font-size: 0.88em;
+            color: #5a5a5a;
+            line-height: 1.5;
+        }
+        
+        .methods-list {
+            margin-top: 10px;
+        }
+        
+        .methods-list li {
+            margin-bottom: 10px;
+            color: #3d3d3d;
+            padding-left: 18px;
+            position: relative;
+            font-size: 0.93em;
+        }
+        
+        .methods-list li::before {
+            content: "\2022";
+            position: absolute;
+            left: 0;
+            color: #c9b8a3;
+        }
+        
+        .footer {
+            margin-top: 36px;
+            padding-top: 24px;
+            border-top: 1px solid #e8e6e1;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .contact {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+        
+        .contact-name {
+            font-weight: 600;
+            color: #2d2d2d;
+            font-size: 0.95em;
+        }
+        
+        .contact-info {
+            font-size: 0.88em;
+            color: #6b6b6b;
+        }
+        
+        .contact-program {
+            font-size: 0.88em;
+            color: #8b7355;
+            margin-top: 2px;
+        }
+        
+        .keywords {
+            text-align: right;
+            font-size: 0.82em;
+            color: #8b7355;
+            line-height: 1.6;
+        }
+        
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        @media print {
+            body {
+                padding: 0;
+                background: white;
+            }
+            .container {
+                border: none;
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="title">Performing Alignment</div>
+            <div class="subtitle">Exploring Role Specifications as Soft Control Mechanisms in a Resource-Sharing Simulation with LLM Agents</div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">Research Context</div>
+            <div class="section-content">
+                LLM agents are entering socio-technical systems where coordination and resource management create systemic risks beyond single-model failures. Most studies treat roles as background setup, yet they fundamentally shape agent behavior. This research investigates whether structured Role Specifications—encompassing persona, goals, norms, tactics, time beliefs, and pressures—can reliably guide cooperation in mixed-motive settings.
+            </div>
+        </div>
+        
+        <div class="research-question">
+            How do Role Specifications influence cooperation, communication, and adaptation dynamics among LLM agents in repeated social dilemmas, and where do they fall short?
+        </div>
+        
+        <div class="section">
+            <div class="section-title">Methodology</div>
+            <div class="section-content">
+                Two LLM agents representing neighboring cities negotiate monthly water allocation during a drought. The simulation follows an Iterated Prisoner's Dilemma structure with pre-decision negotiation, uncertain duration (5-15 rounds), and structured role specifications as the independent variable.
+                
+                <div class="columns">
+                    <div class="column-item">
+                        <div class="column-title">Role Components</div>
+                        <div class="column-text">
+                            Persona, goals, norms, tactics, time beliefs, red lines, disclosure policies, private pressures
+                        </div>
+                    </div>
+                    <div class="column-item">
+                        <div class="column-title">Data Collection</div>
+                        <div class="column-text">
+                            Negotiation transcripts, decision logs, payoff outcomes, post-simulation interviews
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">Agent Roles</div>
+            <div class="section-content">
+                <ul class="methods-list">
+                    <li><strong>Sustainability Officer:</strong> Long-term cooperation focus, norm enforcement, mutual monitoring</li>
+                    <li><strong>City Growth Planner:</strong> Demand-driven, flexible, politically pressured toward short-term gains</li>
+                    <li><strong>Water Security Commissioner:</strong> Risk-averse, favors early protection and graduated sanctions</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">Theoretical Framework</div>
+            <div class="section-content">
+                The work bridges game theory (Iterated Prisoner's Dilemma, shadow of the future), symbolic interactionism (Goffman's role performance), Ostrom's commons governance principles, and contemporary research on LLM multi-agent systems. Role Specifications are examined as both descriptive tools and prescriptive levers for alignment.
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">Expected Contributions</div>
+            <div class="section-content">
+                <ul class="methods-list">
+                    <li>Systematic evaluation of role specifications as soft-control mechanisms</li>
+                    <li>Empirical insights on role adherence, adaptation, and drift under pressure</li>
+                    <li>Practical design guidance for multi-agent cooperation in resource dilemmas</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <div class="contact">
+                <div class="contact-name">Mohsen Hassan Nejad</div>
+                <div class="contact-info">MA Student, Artificial Intelligence for Sustainable Societies</div>
+                <div class="contact-program">Erasmus Mundus Scholarship · 2025-2026</div>
+            </div>
+            <div class="keywords">
+                Multi-Agent Systems<br>
+                AI Alignment<br>
+                Game Theory<br>
+                Commons Governance
+            </div>
+        </div>
+    </div>
+</body>
+</html>
