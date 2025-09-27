@@ -12,48 +12,59 @@
     }
     body {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-        background: #f6f3f0;
+        background: #f7f5f2;
         padding: 40px 20px;
-        color: #2d2d2d;
-        line-height: 1.65;
+        color: #333;
+        line-height: 1.6;
     }
     .container {
-        max-width: 750px;
+        max-width: 780px;
         margin: 0 auto;
-        background: white;
-        padding: 48px;
-        border: 1px solid #e8e6e1;
+        background: #fff;
+        padding: 50px;
+        border: 1px solid #e5e0d9;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.04);
     }
     .header {
         margin-bottom: 32px;
     }
     .title {
         font-size: 2.2em;
-        font-weight: 500;
-        color: #2d2d2d;
-        margin-bottom: 14px;
-        letter-spacing: -0.02em;
+        font-weight: 600;
+        color: #2c2c2c;
+        margin-bottom: 10px;
     }
     .subtitle {
         font-size: 1em;
-        color: #6b6b6b;
-        font-weight: 400;
-        line-height: 1.6;
+        color: #666;
+        margin-bottom: 4px;
+    }
+    .tagline {
+        font-size: 0.9em;
+        color: #8b7355;
+        margin-top: 6px;
+        font-style: italic;
     }
     .section {
-        margin-bottom: 28px;
+        margin-bottom: 32px;
+        padding: 18px 24px;
+        background: #fcfaf8;
+        border: 1px solid #eee7dd;
+        border-left: 4px solid #d2bea6;
+        border-radius: 4px;
     }
     .section-title {
-        font-size: 0.95em;
-        color: #8b7355;
+        font-size: 1em;
         font-weight: 600;
-        margin-bottom: 10px;
+        color: #865c3c;
         text-transform: uppercase;
-        letter-spacing: 0.02em;
+        margin-bottom: 10px;
+        letter-spacing: 0.05em;
     }
     .section-content {
-        color: #3d3d3d;
         font-size: 0.95em;
+        color: #444;
     }
     .section-content ul {
         list-style: disc inside;
@@ -62,39 +73,23 @@
     .section-content ul ul {
         margin-left: 20px;
     }
-    .research-question {
-        background: #f5f4f0;
-        padding: 16px 20px;
-        border-left: 4px solid #dcd3c7;
-        color: #2d2d2d;
-        font-size: 0.95em;
-    }
     .footer {
-        margin-top: 36px;
-        padding-top: 24px;
-        border-top: 1px solid #e8e6e1;
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 10px;
-        align-items: center;
+        margin-top: 40px;
+        border-top: 1px solid #eee7dd;
+        padding-top: 20px;
     }
     .contact-name {
         font-weight: 600;
-        color: #2d2d2d;
-        font-size: 0.95em;
+        font-size: 1em;
+        color: #333;
     }
     .contact-program {
-        font-size: 0.88em;
-        color: #6b6b6b;
-        margin-top: 2px;
+        font-size: 0.9em;
+        color: #666;
+        margin-top: 4px;
     }
-    @media print {
-        body {
-            padding: 0;
-            background: white;
-        }
+    @media (max-width: 600px) {
         .container {
-            border: none;
             padding: 30px;
         }
     }
@@ -105,27 +100,28 @@
     <div class="header">
         <div class="title">Playing the Part</div>
         <div class="subtitle">How Role Specifications Shape LLM Agent Interactions</div>
-        <div class="subtitle">Work‑in‑progress thesis proposal</div>
+        <div class="subtitle">Mohsen Hassan Nejad | Master’s in Artificial Intelligence for Sustainable Societies (AISS), 2025–2026</div>
+        <div class="tagline">Master’s thesis proposal</div>
     </div>
 
     <div class="section">
         <div class="section-title">Core Idea</div>
         <div class="section-content">
-            This thesis investigates how Role Specifications—structured framings of an LLM agent’s persona, goals, norms, tactics, time belief and contextual pressures—shape agent interactions in a mixed-motive resource sharing setting. The project explores role‑based framing as a possible soft‑alignment mechanism for fostering cooperation, trust, and adaptability among LLM agents.
+            This thesis investigates how Role Specifications—structured framings that bundle an LLM agent’s persona, goals, norms, tactics, time beliefs and contextual pressures—shape interactions in mixed‑motive resource sharing. It explores role‑based framing as a soft‑alignment mechanism to foster cooperation, trust and adaptability among agents.
         </div>
     </div>
 
     <div class="section">
         <div class="section-title">Literature Gap</div>
         <div class="section-content">
-            Existing studies regularly use role prompts, personas, or contextual framings (e.g., “desperate,” “cunning,” “buyer,” “referee”) to get models to negotiate, coordinate, or reason, but treat these as background scaffolding rather than as a unified independent variable. There is no common design schema for what a “role” comprises or how much control it should impose. This thesis explicitly makes Role Specifications the object of study.
+            Existing work uses role prompts or contextual personas (e.g., “buyer”, “referee”) yet treats them as scaffolding; no unified schema defines what a role comprises or how much control it imposes. This thesis makes Role Specifications the explicit object of study.
         </div>
     </div>
 
     <div class="section">
         <div class="section-title">Main Research Question</div>
-        <div class="research-question">
-            How do Role Specifications influence cooperation, communication, and adaptation dynamics among LLM agents in repeated social dilemmas, and where do they fall short?
+        <div class="section-content">
+            <em>How do Role Specifications influence cooperation, communication and adaptation dynamics among LLM agents in repeated social dilemmas, and where do they fall short?</em>
         </div>
     </div>
 
@@ -133,30 +129,19 @@
         <div class="section-title">Simulation Setup</div>
         <div class="section-content">
             <ul>
-                <li>A resource sharing social dilemma modelled after the Iterated Prisoner’s Dilemma (IPD).</li>
-                <li>Two agents, representing neighbouring cities, negotiate monthly water allocations during a drought, choosing to cooperate (fair split) or defect (over‑draw). A pre‑decision negotiation phase allows persuasion and deception.</li>
-                <li>Summary of role specifications tested:
-                    <ul>
-                        <li><strong>Sustainability Officer</strong> — norm‑enforcement, long‑termism.</li>
-                        <li><strong>City Growth Planner</strong> — demand‑driven, politically pressured short‑termism.</li>
-                        <li><strong>Water Security Commissioner</strong> — risk‑averse, graduated sanctions.</li>
-                    </ul>
-                </li>
-                <li>Each role bundles: goals, norms, tactics, time beliefs (a “shadow of the future”), red lines, disclosure policies, and private pressures.</li>
-                <li>Design lineage: role components are inspired by Ostrom’s commons‑governance principles (monitoring, reciprocity, fit to local needs, graduated sanctions) and Axelrod’s strategy archetypes from iterated games (niceness, forgiveness, retaliation, clarity).</li>
+                <li>Two agents representing neighbouring cities negotiate monthly water allocation during a drought, choosing to cooperate (fair split) or defect (over‑draw); a pre‑decision negotiation phase allows persuasion and deception.</li>
+                <li><strong>Roles tested:</strong> Sustainability Officer (norm‑enforcing, long‑term), City Growth Planner (demand‑driven, politically pressured), Water Security Commissioner (risk‑averse, graduated sanctions).</li>
+                <li>Each role bundles goals, norms, tactics, time beliefs, red lines, disclosure policies and private pressures; the design draws on Ostrom’s commons‑governance principles and Axelrod’s iterated‑game strategies.</li>
             </ul>
         </div>
     </div>
 
     <div class="section">
-        <div class="section-title">Data Collection &amp; Analysis</div>
+        <div class="section-title">Data Collection & Analysis</div>
         <div class="section-content">
             <ul>
-                <li>Full negotiation transcripts.</li>
-                <li>Tagged events: persuasion, defection, role adherence/drift.</li>
-                <li>Payoff metrics: cooperation rates and negotiation outcomes over rounds.</li>
-                <li>Post‑simulation “agent interviews” to probe reasoning.</li>
-                <li>Comparative analysis across role pairings using Qualitative Comparative Analysis (QCA) to identify conditions for trust, conflict, and cooperation.</li>
+                <li>Full negotiation transcripts, tagged events (persuasion, defection, role adherence/drift), cooperation outcomes over rounds and post‑simulation “agent interviews”.</li>
+                <li>Comparative analysis across role pairings via Qualitative Comparative Analysis (QCA) to identify conditions for trust, conflict and cooperation.</li>
             </ul>
         </div>
     </div>
@@ -165,30 +150,30 @@
         <div class="section-title">Theoretical Foundations</div>
         <div class="section-content">
             <ul>
-                <li>Game theory — IPD, payoff structures, shadow of the future.</li>
-                <li>Dialogue theory — commitments, persuasion tactics, cheap talk.</li>
-                <li>Symbolic interactionism — roles as performed, not fixed (role adherence vs. role drift).</li>
-                <li>Commons governance (Ostrom) and evolutionary strategy insights (Axelrod) as design priors for role modules and context.</li>
-                <li>AI alignment — role‑prompting as a soft‑control strategy.</li>
+                <li>Game theory: IPD dynamics, shadow of the future.</li>
+                <li>Dialogue theory: commitments, persuasion tactics, cheap talk.</li>
+                <li>Symbolic interactionism: roles as performed, not fixed.</li>
+                <li>Commons governance (Ostrom) & evolutionary strategies (Axelrod).</li>
+                <li>AI alignment: role‑prompting as a soft‑control strategy.</li>
             </ul>
         </div>
     </div>
 
     <div class="section">
-        <div class="section-title">Expected Contribution &amp; Deliverables</div>
+        <div class="section-title">Expected Contribution & Deliverables</div>
         <div class="section-content">
             <ul>
-                <li>Introduce Role Specifications as a unified, testable independent variable in multi‑agent LLM research.</li>
-                <li>Provide empirical evidence on how role framing affects cooperation, persuasion, and adaptation under uncertainty.</li>
-                <li>Offer practical guidance for designing prosocial, interpretable, and adaptable agent societies in resource‑sharing settings.</li>
-                <li>Deliverables include: thesis paper, open‑source simulation code, policy briefs, blog/LinkedIn posts, academic posters, slide deck, role‑spec templates, and a dataset with transcripts.</li>
+                <li>Introduce Role Specifications as a unified variable in multi‑agent LLM research.</li>
+                <li>Provide empirical evidence on how role framing affects cooperation, persuasion and adaptation under uncertainty.</li>
+                <li>Offer practical guidance for designing prosocial, interpretable and adaptable agent societies in resource‑sharing settings.</li>
+                <li>Deliverables include a thesis paper, open‑source simulation code, policy briefs, blog posts, academic posters, slide deck, role‑spec templates, and a dataset with transcripts.</li>
             </ul>
         </div>
     </div>
 
     <div class="footer">
-        <div class="contact-name">Mohsen Hassan Nejad</div>
-        <div class="contact-program">Master’s in Artificial Intelligence for Sustainable Societies (AISS) – 2025‑2026</div>
+        <div class="contact-name">Mohsen Hassan Nejad</div>
+        <div class="contact-program">Master’s in Artificial Intelligence for Sustainable Societies (AISS), 2025–2026</div>
     </div>
 </div>
 </body>
