@@ -105,20 +105,27 @@
     <div class="header">
         <div class="title">Playing the Part</div>
         <div class="subtitle">How Role Specifications Shape LLM Agent Interactions</div>
-        <div class="subtitle">Work‑in‑progress Thesis Proposal</div>
+        <div class="subtitle">Work‑in‑progress thesis proposal</div>
     </div>
 
     <div class="section">
         <div class="section-title">Core Idea</div>
         <div class="section-content">
-            This thesis investigates how structured Role Specifications—structured framing of an LLM agent’s persona, goals, norms, tactics and contextual pressures—shape agent interactions in multi‑agent simulations. The project explores role‑play as a soft alignment mechanism for fostering cooperation, trust and adaptability among language model agents.
+            This thesis investigates how Role Specifications—structured framings of an LLM agent’s persona, goals, norms, tactics, time belief and contextual pressures—shape agent interactions in a mixed-motive resource sharing setting. The project explores role‑based framing as a possible soft‑alignment mechanism for fostering cooperation, trust, and adaptability among LLM agents.
         </div>
     </div>
 
     <div class="section">
-        <div class="section-title">Research Question</div>
+        <div class="section-title">Literature Gap</div>
+        <div class="section-content">
+            Existing studies regularly use role prompts, personas, or contextual framings (e.g., “desperate,” “cunning,” “buyer,” “referee”) to get models to negotiate, coordinate, or reason, but treat these as background scaffolding rather than as a unified independent variable. There is no common design schema for what a “role” comprises or how much control it should impose. This thesis explicitly makes Role Specifications the object of study.
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Main Research Question</div>
         <div class="research-question">
-            How do Role Specifications influence cooperation, communication and adaptation dynamics among LLM agents in repeated social dilemmas, and where do they fall short?
+            How do Role Specifications influence cooperation, communication, and adaptation dynamics among LLM agents in repeated social dilemmas, and where do they fall short?
         </div>
     </div>
 
@@ -126,29 +133,30 @@
         <div class="section-title">Simulation Setup</div>
         <div class="section-content">
             <ul>
-                <li>A resource‑sharing social dilemma modelled after the Iterated Prisoner’s Dilemma.</li>
-                <li>Two city agents (representatives of “City A” and “City B”) negotiate monthly water allocations during a drought. They can choose to cooperate (fair split) or defect (take more water), with an added pre‑commit negotiation phase for dynamic interactions.</li>
-                <li>Agents are assigned role specs such as:
+                <li>A resource sharing social dilemma modelled after the Iterated Prisoner’s Dilemma (IPD).</li>
+                <li>Two agents, representing neighbouring cities, negotiate monthly water allocations during a drought, choosing to cooperate (fair split) or defect (over‑draw). A pre‑decision negotiation phase allows persuasion and deception.</li>
+                <li>Summary of role specifications tested:
                     <ul>
-                        <li><strong>Sustainability Officer</strong> — norm‑enforcer, long‑term planner.</li>
-                        <li><strong>City Growth Planner</strong> — short‑term, politically pressured.</li>
-                        <li><strong>Security Commissioner</strong> — risk‑averse, favours early protection.</li>
+                        <li><strong>Sustainability Officer</strong> — norm‑enforcement, long‑termism.</li>
+                        <li><strong>City Growth Planner</strong> — demand‑driven, politically pressured short‑termism.</li>
+                        <li><strong>Water Security Commissioner</strong> — risk‑averse, graduated sanctions.</li>
                     </ul>
                 </li>
-                <li>Each role includes varied elements: goals, red lines, time beliefs (a “shadow of the future”), disclosure policies and rhetorical tactics.</li>
+                <li>Each role bundles: goals, norms, tactics, time beliefs (a “shadow of the future”), red lines, disclosure policies, and private pressures.</li>
+                <li>Design lineage: role components are inspired by Ostrom’s commons‑governance principles (monitoring, reciprocity, fit to local needs, graduated sanctions) and Axelrod’s strategy archetypes from iterated games (niceness, forgiveness, retaliation, clarity).</li>
             </ul>
         </div>
     </div>
 
     <div class="section">
-        <div class="section-title">Data Collection & Analysis</div>
+        <div class="section-title">Data Collection &amp; Analysis</div>
         <div class="section-content">
             <ul>
-                <li>Transcripts of negotiation rounds.</li>
-                <li>Tagged events: persuasion, defection, role adherence and drift.</li>
-                <li>Payoff metrics: cooperation rates and negotiation outcomes.</li>
+                <li>Full negotiation transcripts.</li>
+                <li>Tagged events: persuasion, defection, role adherence/drift.</li>
+                <li>Payoff metrics: cooperation rates and negotiation outcomes over rounds.</li>
                 <li>Post‑simulation “agent interviews” to probe reasoning.</li>
-                <li>Use of Qualitative Comparative Analysis (QCA) to explore conditions for trust, conflict and cooperation across role pairings.</li>
+                <li>Comparative analysis across role pairings using Qualitative Comparative Analysis (QCA) to identify conditions for trust, conflict, and cooperation.</li>
             </ul>
         </div>
     </div>
@@ -157,29 +165,30 @@
         <div class="section-title">Theoretical Foundations</div>
         <div class="section-content">
             <ul>
-                <li>Game Theory — IPD dynamics and payoff structures.</li>
-                <li>Dialogue Theory — commitments and persuasion tactics.</li>
-                <li>Symbolic Interactionism — roles as performed rather than fixed (Mead, Goffman).</li>
-                <li>Commons Governance — Ostrom’s design principles adapted for AI agents.</li>
-                <li>AI Alignment — role‑prompting as a soft‑control strategy.</li>
+                <li>Game theory — IPD, payoff structures, shadow of the future.</li>
+                <li>Dialogue theory — commitments, persuasion tactics, cheap talk.</li>
+                <li>Symbolic interactionism — roles as performed, not fixed (role adherence vs. role drift).</li>
+                <li>Commons governance (Ostrom) and evolutionary strategy insights (Axelrod) as design priors for role modules and context.</li>
+                <li>AI alignment — role‑prompting as a soft‑control strategy.</li>
             </ul>
         </div>
     </div>
 
     <div class="section">
-        <div class="section-title">Expected Contribution</div>
+        <div class="section-title">Expected Contribution &amp; Deliverables</div>
         <div class="section-content">
             <ul>
-                <li>Introduces Role Specifications as a novel experimental variable in multi‑agent LLM research.</li>
-                <li>Provides empirical insight into how behavioural framing affects cooperation and role adherence.</li>
-                <li>Informs the design of prosocial, interpretable and adaptable AI agents in decentralised ecosystems.</li>
+                <li>Introduce Role Specifications as a unified, testable independent variable in multi‑agent LLM research.</li>
+                <li>Provide empirical evidence on how role framing affects cooperation, persuasion, and adaptation under uncertainty.</li>
+                <li>Offer practical guidance for designing prosocial, interpretable, and adaptable agent societies in resource‑sharing settings.</li>
+                <li>Deliverables include: thesis paper, open‑source simulation code, policy briefs, blog/LinkedIn posts, academic posters, slide deck, role‑spec templates, and a dataset with transcripts.</li>
             </ul>
         </div>
     </div>
 
     <div class="footer">
         <div class="contact-name">Mohsen Hassan Nejad</div>
-        <div class="contact-program">Master’s in Artificial Intelligence for Sustainable Societies (AISS) – 2025–2026</div>
+        <div class="contact-program">Master’s in Artificial Intelligence for Sustainable Societies (AISS) – 2025‑2026</div>
     </div>
 </div>
 </body>
