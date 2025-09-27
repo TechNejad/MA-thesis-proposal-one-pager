@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -92,7 +93,8 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
-    margin-bottom: 45px;
+    /* reduce bottom margin to eliminate excess whitespace after sections */
+    margin-bottom: 20px;
 }
 
         
@@ -118,7 +120,7 @@
         .roles-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
+            gap: 18px;
             margin: 24px 0;
         }
         
@@ -183,11 +185,12 @@
             line-height: 1.7;
         }
         
-        .contributions {
+.contributions {
             background: #2d2d2d;
             color: white;
             padding: 40px 50px;
-            margin-top: 50px;
+            /* further reduce top margin to tighten spacing between sections */
+            margin-top: 15px;
         }
         
         
@@ -288,13 +291,14 @@
             }
             
             
-.two-col-section {
-    /* Lay out section titles above their content instead of side-by-side */
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    margin-bottom: 45px;
-}
+        .two-col-section {
+            /* Lay out section titles above their content instead of side-by-side */
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            /* reduce bottom margin to eliminate excess whitespace on small screens */
+            margin-bottom: 20px;
+        }
 
             
             .roles-grid {
@@ -322,7 +326,36 @@
                 print-color-adjust: exact;
             }
         }
-    </style>
+    /* --- Auto-injected tweaks for consistent section separators & spacing --- */
+main > section + section,
+.page section + section,
+.page-section + .page-section,
+.section + .section,
+.container > section + section {
+  border-top: 1px solid #e6e6e6;
+  margin-top: 24px;
+  padding-top: 24px;
+}
+
+/* Reduce extra whitespace: tighten common vertical rhythm */
+h1, h2, h3, h4 { margin-top: 0.6em; margin-bottom: 0.4em; }
+p { margin-top: 0.4em; margin-bottom: 0.6em; }
+ul, ol { margin-top: 0.4em; margin-bottom: 0.6em; }
+
+/* Tighten theoretical grounding bullets */
+.theory-list .theory-item { margin-bottom: 6px; }
+.theory-list { gap: 8px; }
+.theory-content .theory-text { display: inline; }
+.tight-bottom { margin-bottom: 8px !important; }
+</style>
+<style>
+/* --- Injected separators and spacing overrides --- */
+.section-sep { border-top: 1px solid #e6e6e6; margin: 24px 0 24px 0; }
+.theory-list .theory-item { margin-bottom: 6px !important; }
+.theory-list { gap: 8px !important; }
+h2, .section-label, .question-label { margin-bottom: 8px !important; }
+.tight-bottom { margin-bottom: 8px !important; }
+</style>
 </head>
 <body>
     <div class="container">
@@ -336,23 +369,24 @@
                 This thesis investigates how <strong>Role Specifications</strong>—structured framings of persona, goals, norms, tactics, time beliefs, and contextual pressures—shape LLM agent interactions in mixed-motive resource sharing. While existing studies use role prompts as background scaffolding, this work makes them the <strong>unified independent variable</strong>, exploring role-based framing as a possible soft-alignment mechanism for agent interactions.
             </div>
             
-            <div class="question-block">
+            
+<div class="section-sep"></div>
+<div class="question-block">
                 <div class="question-label">Main Research Question</div>
                 <div class="question-text">
                     How do Role Specifications influence cooperation, communication, and adaptation dynamics among LLM agents in repeated social dilemmas, and where do they fall short?
                 </div>
             </div>
             
-            <div class="two-col-section">
+            
+<div class="section-sep"></div>
+<div class="two-col-section">
                 <div class="section-label">Simulation Design</div>
                 <div class="section-body">
                     An <strong>Iterated Prisoner's Dilemma</strong> where two city agents negotiate monthly water allocations during a drought, choosing to cooperate (fair split) or defect (over-draw). A pre-decision negotiation phase allows for dynamic interactions.
                     
-                    <div class="design-note" style="margin-bottom: 20px;">
-                        Summary of role specifications:
-                    </div>
-                    
-                    <div class="roles-grid">
+                    <div class="design-note" style="margin-bottom: 20px;"><strong style="font-style: normal;">Summary of role specifications:</strong></div>
+<div class="roles-grid">
                         <div class="role-card">
                             <div class="role-title">Sustainability Officer</div>
                             <div class="role-desc">norm-enforcement, long-termism</div>
@@ -373,51 +407,54 @@
                 </div>
             </div>
             
-            <div class="two-col-section">
+            
+<div class="section-sep"></div>
+<div class="two-col-section">
                 <div class="section-label">Data & Analysis</div>
                 <div class="section-body">
                     Full negotiation transcripts tagged for persuasion, defection, and role adherence/drift · Payoff metrics tracking cooperation rates · Post-simulation agent interviews · Qualitative Comparative Analysis (QCA) across role pairings to identify conditions for trust and conflict.
                 </div>
             </div>
             
-            <div class="two-col-section">
+            
+<div class="section-sep"></div>
+<div class="two-col-section tight-bottom">
                 <div class="section-label">Theoretical Grounding</div>
                 <div class="section-body">
-                    <div class="theory-list">
+<div class="theory-list">
                         <div class="theory-item">
                             <div class="theory-bullet"></div>
                             <div class="theory-content">
-                                <span class="theory-title">Game Theory</span> <span class="theory-text">— Provides the structural foundation through Iterated Prisoner's Dilemma dynamics, payoff structures, and the "shadow of the future"</span>
+                                <span class="theory-title">Game Theory</span>
+                                <span class="theory-text">— Iterated Prisoner’s Dilemma with cheap talk; test role effects on strategy and payoffs under Axelrod-style archetypes and varying horizons.</span>
                             </div>
                         </div>
                         <div class="theory-item">
                             <div class="theory-bullet"></div>
                             <div class="theory-content">
-                                <span class="theory-title">Dialogue Theory</span> <span class="theory-text">— Analyzes how agents use "cheap talk," commitments, and persuasion tactics</span>
+                                <span class="theory-title">Dialogue Theory</span>
+                                <span class="theory-text">— Model norms, commitments, and persuasion as mechanisms that mediate negotiation outcomes.</span>
                             </div>
                         </div>
                         <div class="theory-item">
                             <div class="theory-bullet"></div>
                             <div class="theory-content">
-                                <span class="theory-title">Symbolic Interactionism</span> <span class="theory-text">— Frames roles as performed and dynamic, enabling analysis of role adherence versus drift</span>
+                                <span class="theory-title">Symbolic Interactionism</span>
+                                <span class="theory-text">— Treat roles as performed rather than fixed; analyze adherence vs. drift under pressure.</span>
                             </div>
                         </div>
                         <div class="theory-item">
                             <div class="theory-bullet"></div>
                             <div class="theory-content">
-                                <span class="theory-title">Commons Governance</span> <span class="theory-text">— Ostrom's design principles inspire role component specifications</span>
+                                <span class="theory-title">Commons Governance (Ostrom)</span>
+                                <span class="theory-text">— Encode monitoring, reciprocity, fit to local needs, and graduated sanctions as role priors.</span>
                             </div>
                         </div>
                         <div class="theory-item">
                             <div class="theory-bullet"></div>
                             <div class="theory-content">
-                                <span class="theory-title">Evolutionary Game Theory</span> <span class="theory-text">— Axelrod's strategy archetypes inform role behavioral patterns</span>
-                            </div>
-                        </div>
-                        <div class="theory-item">
-                            <div class="theory-bullet"></div>
-                            <div class="theory-content">
-                                <span class="theory-title">AI Alignment</span> <span class="theory-text">— Examines role-prompting as a soft-control strategy</span>
+                                <span class="theory-title">Alignment via Soft Control</span>
+                                <span class="theory-text">— Evaluate role specifications as lightweight, interpretable levers for prosocial multi-agent behavior.</span>
                             </div>
                         </div>
                     </div>
@@ -430,12 +467,16 @@
             <div class="contributions-text">
                 Introduces Role Specifications as a testable independent variable in multi-agent LLM research · Provides empirical evidence on how role framing affects cooperation, persuasion, and adaptation · Offers practical guidance for designing prosocial, interpretable agent societies
             </div>
-            <div class="deliverables">
+            
+<div class="section-sep"></div>
+<div class="deliverables">
                 <strong>Deliverables:</strong> Thesis paper · Open-source code · Policy briefs · Academic posters · Role-spec templates · Dataset & transcripts
             </div>
         </div>
         
-        <div class="footer">
+        
+<div class="section-sep"></div>
+<div class="footer">
             <div class="author-block">
                 <div class="author-name">Mohsen Hassan Nejad</div>
                 <div class="author-details">
