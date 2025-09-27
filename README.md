@@ -1,6 +1,6 @@
-# Thesis One‑Pager
+# Playing the Part – Thesis One‑Pager
 
-This repository contains a one‑page summary of my thesis, captured as a single HTML file. It outlines the research context, methodology, agent roles, theoretical framework, and expected contributions for my work on performing alignment in multi‑agent systems.
+This repository contains a one‑page summary of my work‑in‑progress thesis, "Playing the Part: How Role Specifications Shape LLM Agent Interactions". The summary is captured as a single HTML file and outlines the core idea, research question, simulation setup, data collection and analysis, theoretical foundations, and expected contributions.
 
-- **Live page:** [Performing Alignment one‑page summary](https://technejad.github.io/MA-thesis-proposal-one-pager/)
+- **Live page:** [Playing the Part one‑page summary](https://technejad.github.io/MA-thesis-proposal-one-pager/)
 - **Google document:** [My love Google doc](https://docs.google.com/document/d/13HdbxagbMUa5Y8iukpybiEJUAIF-IcdyL_gDgcrTJss/edit?tab=t.zhlonntsio10)
