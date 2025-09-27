@@ -1,195 +1,375 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Playing the Part – Thesis One‑Pager</title>
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    body {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-        background: #f6f3f0;
-        padding: 40px 20px;
-        color: #2d2d2d;
-        line-height: 1.65;
-    }
-    .container {
-        max-width: 750px;
-        margin: 0 auto;
-        background: white;
-        padding: 48px;
-        border: 1px solid #e8e6e1;
-    }
-    .header {
-        margin-bottom: 32px;
-    }
-    .title {
-        font-size: 2.2em;
-        font-weight: 500;
-        color: #2d2d2d;
-        margin-bottom: 14px;
-        letter-spacing: -0.02em;
-    }
-    .subtitle {
-        font-size: 1em;
-        color: #6b6b6b;
-        font-weight: 400;
-        line-height: 1.6;
-    }
-    .section {
-        margin-bottom: 28px;
-    }
-    .section-title {
-        font-size: 0.95em;
-        color: #8b7355;
-        font-weight: 600;
-        margin-bottom: 10px;
-        text-transform: uppercase;
-        letter-spacing: 0.02em;
-    }
-    .section-content {
-        color: #3d3d3d;
-        font-size: 0.95em;
-    }
-    .section-content ul {
-        list-style: disc inside;
-        margin-left: 0;
-    }
-    .section-content ul ul {
-        margin-left: 20px;
-    }
-    .research-question {
-        background: #f5f4f0;
-        padding: 16px 20px;
-        border-left: 4px solid #dcd3c7;
-        color: #2d2d2d;
-        font-size: 0.95em;
-    }
-    .footer {
-        margin-top: 36px;
-        padding-top: 24px;
-        border-top: 1px solid #e8e6e1;
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 10px;
-        align-items: center;
-    }
-    .contact-name {
-        font-weight: 600;
-        color: #2d2d2d;
-        font-size: 0.95em;
-    }
-    .contact-program {
-        font-size: 0.88em;
-        color: #6b6b6b;
-        margin-top: 2px;
-    }
-    @media print {
-        body {
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playing the Part - Thesis One-Pager</title>
+    <style>
+        * {
+            margin: 0;
             padding: 0;
-            background: white;
+            box-sizing: border-box;
         }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            background: #f8f7f5;
+            padding: 50px 20px;
+            color: #2a2a2a;
+            line-height: 1.7;
+        }
+        
         .container {
-            border: none;
-            padding: 30px;
+            max-width: 820px;
+            margin: 0 auto;
+            background: white;
+            padding: 60px 55px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
         }
-    }
-</style>
+        
+        .header {
+            margin-bottom: 48px;
+            padding-bottom: 24px;
+            border-bottom: 2px solid #e5e3df;
+        }
+        
+        .title {
+            font-size: 2.4em;
+            font-weight: 500;
+            color: #1a1a1a;
+            margin-bottom: 14px;
+            letter-spacing: -0.03em;
+            line-height: 1.2;
+        }
+        
+        .subtitle {
+            font-size: 0.92em;
+            color: #9b8b7e;
+            font-style: italic;
+            font-weight: 400;
+        }
+        
+        .section {
+            margin-bottom: 38px;
+        }
+        
+        .section-title {
+            font-size: 0.94em;
+            color: #9b8b7e;
+            font-weight: 700;
+            margin-bottom: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+        }
+        
+        .section-content {
+            color: #3a3a3a;
+            font-size: 0.96em;
+            line-height: 1.75;
+        }
+        
+        .highlight-box {
+            background: #faf9f7;
+            padding: 26px 30px;
+            margin: 38px 0;
+            border-left: 3px solid #d4c4b0;
+        }
+        
+        .highlight-title {
+            font-size: 0.94em;
+            color: #9b8b7e;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 14px;
+        }
+        
+        .highlight-text {
+            font-size: 1em;
+            color: #2a2a2a;
+            font-style: italic;
+            line-height: 1.75;
+        }
+        
+        .roles-container {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        
+        .role-header {
+            font-weight: 600;
+            color: #2a2a2a;
+            margin-top: 22px;
+            margin-bottom: 12px;
+            font-size: 0.93em;
+        }
+        
+        .role-item {
+            font-size: 0.94em;
+            color: #3a3a3a;
+            line-height: 1.7;
+        }
+        
+        .role-name {
+            font-weight: 600;
+            color: #2a2a2a;
+        }
+        
+        .role-note {
+            font-size: 0.9em;
+            color: #6b6b6b;
+            margin-top: 16px;
+            line-height: 1.6;
+        }
+        
+        .data-flow {
+            font-size: 0.94em;
+            color: #3a3a3a;
+            line-height: 1.75;
+        }
+        
+        .theory-item {
+            margin-bottom: 18px;
+            font-size: 0.94em;
+            line-height: 1.7;
+        }
+        
+        .theory-label {
+            font-weight: 600;
+            color: #2a2a2a;
+        }
+        
+        .theory-desc {
+            color: #3a3a3a;
+        }
+        
+        .contribution-text {
+            font-size: 0.94em;
+            color: #3a3a3a;
+            line-height: 1.75;
+        }
+        
+        .deliverables-section {
+            margin-top: 20px;
+        }
+        
+        .deliverables-label {
+            font-size: 0.88em;
+            font-weight: 600;
+            color: #6b6b6b;
+            margin-bottom: 8px;
+        }
+        
+        .deliverables-text {
+            font-size: 0.88em;
+            color: #6b6b6b;
+            line-height: 1.65;
+        }
+        
+        .footer {
+            margin-top: 45px;
+            padding-top: 35px;
+            border-top: 2px solid #e5e3df;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        
+        .author-info {
+            flex: 1;
+        }
+        
+        .author-name {
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+            font-size: 0.96em;
+        }
+        
+        .author-program {
+            font-size: 0.88em;
+            color: #6b6b6b;
+            line-height: 1.6;
+        }
+        
+        .contact-info {
+            text-align: right;
+        }
+        
+        .contact-link {
+            display: block;
+            font-size: 0.88em;
+            margin-bottom: 8px;
+        }
+        
+        .contact-link a {
+            color: #9b8b7e;
+            text-decoration: none;
+            border-bottom: 1px solid #d4c4b0;
+            transition: color 0.2s;
+        }
+        
+        .contact-link a:hover {
+            color: #7a6b5e;
+        }
+        
+        .contact-links {
+            font-size: 0.88em;
+            color: #6b6b6b;
+        }
+        
+        .contact-links a {
+            color: #9b8b7e;
+            text-decoration: none;
+        }
+        
+        .contact-links a:hover {
+            color: #7a6b5e;
+        }
+        
+        @media print {
+            body {
+                padding: 0;
+                background: white;
+            }
+            .container {
+                box-shadow: none;
+            }
+        }
+        
+        @media (max-width: 700px) {
+            .roles-container {
+                grid-template-columns: 1fr;
+            }
+            .footer {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .contact-info {
+                text-align: left;
+            }
+        }
+    </style>
 </head>
 <body>
-<div class="container">
-    <div class="header">
-        <div class="title">Playing the Part</div>
-        <div class="subtitle">How Role Specifications Shape LLM Agent Interactions</div>
-        <div class="subtitle">Work‑in‑progress thesis proposal</div>
-    </div>
-
-    <div class="section">
-        <div class="section-title">Core Idea</div>
-        <div class="section-content">
-            This thesis investigates how Role Specifications—structured framings of an LLM agent’s persona, goals, norms, tactics, time belief and contextual pressures—shape agent interactions in a mixed-motive resource sharing setting. The project explores role‑based framing as a possible soft‑alignment mechanism for fostering cooperation, trust, and adaptability among LLM agents.
+    <div class="container">
+        <div class="header">
+            <div class="title">Playing the Part: How Role Specifications Shape LLM Agent Interactions</div>
+            <div class="subtitle">Work-in-progress master's thesis proposal</div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">Research Focus</div>
+            <div class="section-content">
+                This thesis investigates how <strong>Role Specifications</strong>—structured framings of persona, goals, norms, tactics, time beliefs, and contextual pressures—shape LLM agent interactions in mixed-motive resource sharing. While existing studies use role prompts as background scaffolding, this work makes them the <strong>unified independent variable</strong>, exploring role-based framing as a possible soft-alignment mechanism for agent interactions.
+            </div>
+        </div>
+        
+        <div class="highlight-box">
+            <div class="highlight-title">Main Research Question</div>
+            <div class="highlight-text">
+                How do Role Specifications influence cooperation, communication, and adaptation dynamics among LLM agents in repeated social dilemmas, and where do they fall short?
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">Simulation Design</div>
+            <div class="section-content">
+                An <strong>Iterated Prisoner's Dilemma</strong> where two city agents negotiate monthly water allocations during a drought, choosing to cooperate (fair split) or defect (over-draw). A pre-decision negotiation phase allows for dynamic interactions.
+                
+                <div class="role-header">Summary of roles:</div>
+                
+                <div class="roles-container">
+                    <div class="role-item">
+                        <span class="role-name">Sustainability Officer</span><br>
+                        norm-enforcement, long-termism
+                    </div>
+                    <div class="role-item">
+                        <span class="role-name">City Growth Planner</span><br>
+                        demand-driven, short-term pressure
+                    </div>
+                </div>
+                
+                <div class="role-item" style="margin-top: 20px;">
+                    <span class="role-name">Water Security Commissioner</span><br>
+                    risk-averse, graduated sanctions
+                </div>
+                
+                <div class="role-note">
+                    Role components inspired by <strong>Ostrom's commons principles</strong> (monitoring, reciprocity, graduated sanctions) and <strong>Axelrod's strategy archetypes</strong> (niceness, forgiveness, retaliation, clarity).
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">Data & Analysis</div>
+            <div class="section-content">
+                <div class="data-flow">
+                    Full negotiation transcripts tagged for persuasion, defection, and role adherence/drift · Payoff metrics tracking cooperation rates · Post-simulation agent interviews · Qualitative Comparative Analysis (QCA) across role pairings to identify conditions for trust and conflict.
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">Theoretical Grounding</div>
+            <div class="section-content">
+                <div class="theory-item">
+                    <span class="theory-label">Game Theory:</span> <span class="theory-desc">Provides the structural foundation through Iterated Prisoner's Dilemma dynamics, payoff structures, and the "shadow of the future" (how uncertain time horizons affect cooperation).</span>
+                </div>
+                <div class="theory-item">
+                    <span class="theory-label">Dialogue Theory:</span> <span class="theory-desc">Analyzes how agents use "cheap talk," commitments, and persuasion tactics during pre-decision negotiation phases.</span>
+                </div>
+                <div class="theory-item">
+                    <span class="theory-label">Symbolic Interactionism:</span> <span class="theory-desc">Frames roles as performed and dynamic (Mead, Goffman), enabling analysis of role adherence versus role drift.</span>
+                </div>
+                <div class="theory-item">
+                    <span class="theory-label">Commons Governance (Ostrom):</span> <span class="theory-desc">Design principles (monitoring, reciprocity, graduated sanctions) inspire role component specifications.</span>
+                </div>
+                <div class="theory-item">
+                    <span class="theory-label">Evolutionary Game Theory (Axelrod):</span> <span class="theory-desc">Strategy archetypes (niceness, forgiveness, retaliation, clarity) inform role behavioral patterns.</span>
+                </div>
+                <div class="theory-item">
+                    <span class="theory-label">AI Alignment:</span> <span class="theory-desc">Examines role-prompting as a soft-control strategy for shaping multi-agent behavior without hard constraints.</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">Expected Contribution</div>
+            <div class="section-content">
+                <div class="contribution-text">
+                    Introduces Role Specifications as a testable independent variable in multi-agent LLM research · Provides empirical evidence on how role framing affects cooperation, persuasion, and adaptation · Offers practical guidance for designing prosocial, interpretable agent societies.
+                </div>
+                
+                <div class="deliverables-section">
+                    <div class="deliverables-label">Deliverables</div>
+                    <div class="deliverables-text">
+                        Thesis paper · Open-source code · Policy briefs · Academic posters · Role-spec templates · Dataset & transcripts
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <div class="author-info">
+                <div class="author-name">Mohsen Hassan Nejad</div>
+                <div class="author-program">
+                    Master's in Artificial Intelligence for Sustainable Societies (AISS)<br>
+                    Erasmus Mundus Scholarship · 2025-2026
+                </div>
+            </div>
+            <div class="contact-info">
+                <div class="contact-link">
+                    <a href="https://docs.google.com/document/d/13HdbxagbMUa5Y8iukpybiEJUAIF-IcdyL_gDgcrTJss/edit?tab=t.0">Full detailed proposal</a>
+                </div>
+                <div class="contact-links">
+                    <a href="mailto:mohsen.nejad94@gmail.com">Email</a> · 
+                    <a href="https://www.linkedin.com/in/mohsenhassannejad/">LinkedIn</a>
+                </div>
+            </div>
         </div>
     </div>
-
-    <div class="section">
-        <div class="section-title">Literature Gap</div>
-        <div class="section-content">
-            Existing studies regularly use role prompts, personas, or contextual framings (e.g., “desperate,” “cunning,” “buyer,” “referee”) to get models to negotiate, coordinate, or reason, but treat these as background scaffolding rather than as a unified independent variable. There is no common design schema for what a “role” comprises or how much control it should impose. This thesis explicitly makes Role Specifications the object of study.
-        </div>
-    </div>
-
-    <div class="section">
-        <div class="section-title">Main Research Question</div>
-        <div class="research-question">
-            How do Role Specifications influence cooperation, communication, and adaptation dynamics among LLM agents in repeated social dilemmas, and where do they fall short?
-        </div>
-    </div>
-
-    <div class="section">
-        <div class="section-title">Simulation Setup</div>
-        <div class="section-content">
-            <ul>
-                <li>A resource sharing social dilemma modelled after the Iterated Prisoner’s Dilemma (IPD).</li>
-                <li>Two agents, representing neighbouring cities, negotiate monthly water allocations during a drought, choosing to cooperate (fair split) or defect (over‑draw). A pre‑decision negotiation phase allows persuasion and deception.</li>
-                <li>Summary of role specifications tested:
-                    <ul>
-                        <li><strong>Sustainability Officer</strong> — norm‑enforcement, long‑termism.</li>
-                        <li><strong>City Growth Planner</strong> — demand‑driven, politically pressured short‑termism.</li>
-                        <li><strong>Water Security Commissioner</strong> — risk‑averse, graduated sanctions.</li>
-                    </ul>
-                </li>
-                <li>Each role bundles: goals, norms, tactics, time beliefs (a “shadow of the future”), red lines, disclosure policies, and private pressures.</li>
-                <li>Design lineage: role components are inspired by Ostrom’s commons‑governance principles (monitoring, reciprocity, fit to local needs, graduated sanctions) and Axelrod’s strategy archetypes from iterated games (niceness, forgiveness, retaliation, clarity).</li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="section">
-        <div class="section-title">Data Collection &amp; Analysis</div>
-        <div class="section-content">
-            <ul>
-                <li>Full negotiation transcripts.</li>
-                <li>Tagged events: persuasion, defection, role adherence/drift.</li>
-                <li>Payoff metrics: cooperation rates and negotiation outcomes over rounds.</li>
-                <li>Post‑simulation “agent interviews” to probe reasoning.</li>
-                <li>Comparative analysis across role pairings using Qualitative Comparative Analysis (QCA) to identify conditions for trust, conflict, and cooperation.</li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="section">
-        <div class="section-title">Theoretical Foundations</div>
-        <div class="section-content">
-            <ul>
-                <li>Game theory — IPD, payoff structures, shadow of the future.</li>
-                <li>Dialogue theory — commitments, persuasion tactics, cheap talk.</li>
-                <li>Symbolic interactionism — roles as performed, not fixed (role adherence vs. role drift).</li>
-                <li>Commons governance (Ostrom) and evolutionary strategy insights (Axelrod) as design priors for role modules and context.</li>
-                <li>AI alignment — role‑prompting as a soft‑control strategy.</li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="section">
-        <div class="section-title">Expected Contribution &amp; Deliverables</div>
-        <div class="section-content">
-            <ul>
-                <li>Introduce Role Specifications as a unified, testable independent variable in multi‑agent LLM research.</li>
-                <li>Provide empirical evidence on how role framing affects cooperation, persuasion, and adaptation under uncertainty.</li>
-                <li>Offer practical guidance for designing prosocial, interpretable, and adaptable agent societies in resource‑sharing settings.</li>
-                <li>Deliverables include: thesis paper, open‑source simulation code, policy briefs, blog/LinkedIn posts, academic posters, slide deck, role‑spec templates, and a dataset with transcripts.</li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="footer">
-        <div class="contact-name">Mohsen Hassan Nejad</div>
-        <div class="contact-program">Master’s in Artificial Intelligence for Sustainable Societies (AISS) – 2025‑2026</div>
-    </div>
-</div>
 </body>
 </html>
