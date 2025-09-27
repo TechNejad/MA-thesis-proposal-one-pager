@@ -5,275 +5,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Playing the Part - Thesis One-Pager</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             background: #fafafa;
-            padding: 0;
             color: #1a1a1a;
         }
         
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: white;
-        }
+        .container { max-width: 900px; margin: 0 auto; background: #fff; }
         
         .hero {
             background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
-            color: white;
-            padding: 60px 50px 50px;
+            color: #fff; padding: 60px 50px 50px;
         }
+        .title { font-size: 2.8em; font-weight: 700; line-height: 1.15; margin-bottom: 16px; letter-spacing: -0.02em; }
+        .subtitle { font-size: 0.92em; color: #9b8b7e; font-style: italic; font-weight: 400; letter-spacing: 0.02em; }
         
-        .title {
-            font-size: 2.8em;
-            font-weight: 700;
-            line-height: 1.15;
-            margin-bottom: 16px;
-            letter-spacing: -0.02em;
-        }
-        
-        .subtitle {
-            font-size: 0.92em;
-            color: #9b8b7e;
-            font-style: italic;
-            font-weight: 400;
-            letter-spacing: 0.02em;
-        }
-        
-        .content {
-            padding: 50px;
-        }
+        .content { padding: 50px; }
 
-        /* UPDATED: remove bottom border line, tighten spacing */
-        .intro {
-            font-size: 1.1em;
-            line-height: 1.7;
-            color: #2d2d2d;
-            margin-bottom: 28px;   /* was 50px */
-            padding-bottom: 0;     /* was 40px */
-            border-bottom: none;   /* was 1px solid #e5e5e5 */
-        }
+        /* (unused now; intro replaced by sectioned block) */
+        .intro { font-size: 1.1em; line-height: 1.7; color: #2d2d2d; }
         
         .question-block {
-            background: #f8f8f8;
-            padding: 35px 40px;
-            margin: 45px 0;
-            border-left: 4px solid #2d2d2d;
+            background: #f8f8f8; padding: 35px 40px; margin: 45px 0; border-left: 4px solid #2d2d2d;
         }
-        
         .question-label {
-            font-size: 0.95em;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            color: #666;
-            margin-bottom: 14px;
+            font-size: 0.95em; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #666; margin-bottom: 14px;
         }
+        .question-text { font-size: 1.15em; font-style: italic; line-height: 1.6; color: #1a1a1a; }
         
-        .question-text {
-            font-size: 1.15em;
-            font-style: italic;
-            line-height: 1.6;
-            color: #1a1a1a;
-        }
-        
-        .two-col-section {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            margin-bottom: 20px;
-        }
-
+        .two-col-section { display: flex; flex-direction: column; gap: 16px; margin-bottom: 20px; }
         .section-label {
-            font-size: 0.95em;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            color: #666;
-            margin-bottom: 6px;
+            font-size: 0.95em; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #666; margin-bottom: 6px;
         }
-
-        .section-body {
-            font-size: 0.98em;
-            line-height: 1.75;
-            color: #333;
-        }
+        .section-body { font-size: 0.98em; line-height: 1.75; color: #333; }
         
-        .roles-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 18px;
-            margin: 24px 0;
-        }
+        .roles-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin: 24px 0; }
+        .role-card { background: #fafafa; padding: 20px; border-radius: 2px; }
+        .role-title { font-weight: 700; color: #1a1a1a; margin-bottom: 8px; font-size: 0.95em; }
+        .role-desc { font-size: 0.88em; color: #666; line-height: 1.5; }
         
-        .role-card {
-            background: #fafafa;
-            padding: 20px;
-            border-radius: 2px;
-        }
+        .design-note { font-size: 0.92em; color: #666; margin-top: 20px; font-style: italic; }
         
-        .role-title {
-            font-weight: 700;
-            color: #1a1a1a;
-            margin-bottom: 8px;
-            font-size: 0.95em;
-        }
-        
-        .role-desc {
-            font-size: 0.88em;
-            color: #666;
-            line-height: 1.5;
-        }
-        
-        .design-note {
-            font-size: 0.92em;
-            color: #666;
-            margin-top: 20px;
-            font-style: italic;
-        }
-        
-        .theory-list {
-            display: grid;
-            gap: 18px;
-        }
-        
-        .theory-item {
-            display: flex;
-            gap: 12px;
-        }
-        
-        .theory-bullet {
-            width: 6px;
-            height: 6px;
-            background: #2d2d2d;
-            border-radius: 50%;
-            margin-top: 10px;
-            flex-shrink: 0;
-        }
-        
+        .theory-list { display: grid; gap: 8px; }           /* tighter */
+        .theory-item { display: flex; gap: 12px; }
+        .theory-bullet { width: 6px; height: 6px; background: #2d2d2d; border-radius: 50%; margin-top: 10px; flex-shrink: 0; }
         .theory-content { flex: 1; }
         .theory-title { font-weight: 700; color: #1a1a1a; display: inline; }
         .theory-text  { color: #333; display: inline; line-height: 1.7; }
         
-        .contributions {
-            background: #2d2d2d;
-            color: white;
-            padding: 40px 50px;
-            margin-top: 15px;
-        }
-        
-        .contributions-title {
-            font-size: 0.95em;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            opacity: 0.7;
-            margin-bottom: 20px;
-        }
-
-        .contributions-text {
-            font-size: 1.05em;
-            line-height: 1.7;
-            margin-bottom: 28px;
-        }
-        
-        .deliverables {
-            font-size: 0.9em;
-            opacity: 0.75;
-            line-height: 1.6;
-        }
-        
+        .contributions { background: #2d2d2d; color: #fff; padding: 40px 50px; margin-top: 15px; }
+        .contributions-title { font-size: 0.95em; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; opacity: 0.7; margin-bottom: 20px; }
+        .contributions-text { font-size: 1.05em; line-height: 1.7; margin-bottom: 28px; }
+        .deliverables { font-size: 0.9em; opacity: 0.75; line-height: 1.6; }
         .deliverables strong { opacity: 1; font-weight: 600; }
         
-        .footer {
-            background: #fafafa;
-            padding: 40px 50px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
+        .footer { background: #fafafa; padding: 40px 50px; display: flex; justify-content: space-between; align-items: center; }
         .author-block { flex: 1; }
-        .author-name  { font-size: 1.05em; font-weight: 700; color: #1a1a1a; margin-bottom: 8px; }
-        .author-details{ font-size: 0.9em; color: #666; line-height: 1.6; }
-        
+        .author-name { font-size: 1.05em; font-weight: 700; color: #1a1a1a; margin-bottom: 8px; }
+        .author-details { font-size: 0.9em; color: #666; line-height: 1.6; }
         .links { display: flex; flex-direction: column; gap: 10px; align-items: flex-end; }
         .link-item { font-size: 0.9em; }
-        
-        .link-item a {
-            color: #1a1a1a;
-            text-decoration: none;
-            border-bottom: 2px solid #2d2d2d;
-            padding-bottom: 2px;
-            transition: opacity 0.2s;
-        }
+        .link-item a { color: #1a1a1a; text-decoration: none; border-bottom: 2px solid #2d2d2d; padding-bottom: 2px; transition: opacity 0.2s; }
         .link-item a:hover { opacity: 0.6; }
-        
         .contact-links { font-size: 0.88em; color: #666; }
         .contact-links a { color: #1a1a1a; text-decoration: none; border-bottom: 1px solid #999; }
         .contact-links a:hover { opacity: 0.6; }
         
         @media (max-width: 768px) {
             .hero, .content, .contributions, .footer { padding: 40px 30px; }
-            
-            .two-col-section {
-                display: flex;
-                flex-direction: column;
-                gap: 16px;
-                margin-bottom: 20px;
-            }
-
+            .two-col-section { display: flex; flex-direction: column; gap: 16px; margin-bottom: 20px; }
             .roles-grid { grid-template-columns: 1fr; }
             .footer { flex-direction: column; align-items: flex-start; gap: 25px; }
-            .links  { align-items: flex-start; }
+            .links { align-items: flex-start; }
         }
         
         @media print {
-            body { background: white; }
+            body { background: #fff; }
             .hero { background: #2d2d2d; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
         }
 
-        /* --- Auto-injected tweaks for consistent section separators & spacing --- */
-        main > section + section,
-        .page section + section,
-        .page-section + .page-section,
-        .section + .section,
-        .container > section + section {
-          border-top: 1px solid #e6e6e6;
-          margin-top: 24px;
-          padding-top: 24px;
-        }
+        /* Light grey section divider */
+        .section-sep { border-top: 1px solid #e6e6e6; margin: 24px 0; }
 
-        /* Reduce extra whitespace: tighten common vertical rhythm */
+        /* Compact spacing around research question card */
+        .question-block { margin-top: 12px !important; margin-bottom: 24px !important; }
+        
+        /* Small rhythm helpers */
         h1, h2, h3, h4 { margin-top: 0.6em; margin-bottom: 0.4em; }
         p { margin-top: 0.4em; margin-bottom: 0.6em; }
         ul, ol { margin-top: 0.4em; margin-bottom: 0.6em; }
-
-        /* Tighten theoretical grounding bullets */
-        .theory-list .theory-item { margin-bottom: 6px; }
-        .theory-list { gap: 8px; }
-        .theory-content .theory-text { display: inline; }
         .tight-bottom { margin-bottom: 8px !important; }
-    </style>
-
-    <style>
-        /* --- Injected separators and spacing overrides --- */
-        .section-sep { border-top: 1px solid #e6e6e6; margin: 24px 0 24px 0; }
-        .theory-list .theory-item { margin-bottom: 6px !important; }
-        .theory-list { gap: 8px !important; }
-        h2, .section-label, .question-label { margin-bottom: 8px !important; }
-        .tight-bottom { margin-bottom: 8px !important; }
-    </style>
-
-    <style>
-        /* UPDATED: spacing around research question card */
-        .question-block { margin-top: 12px !important; margin-bottom: 24px !important; }
     </style>
 </head>
 <body>
@@ -284,10 +107,14 @@
         </div>
         
         <div class="content">
-            <div class="intro">
-                This thesis investigates how <strong>Role Specifications</strong>—structured framings of persona, goals, norms, tactics, time beliefs, and contextual pressures—shape LLM agent interactions in mixed-motive resource sharing. While existing studies use role prompts as background scaffolding, this work makes them the <strong>unified independent variable</strong>, exploring role-based framing as a possible soft-alignment mechanism for agent interactions.
+            <!-- NEW: harmonized section title for the intro -->
+            <div class="two-col-section">
+                <div class="section-label">Summary of the Idea</div>
+                <div class="section-body">
+                    This thesis investigates how <strong>Role Specifications</strong>—structured framings of persona, goals, norms, tactics, time beliefs, and contextual pressures—shape LLM agent interactions in mixed-motive resource sharing. While existing studies use role prompts as background scaffolding, this work makes them the <strong>unified independent variable</strong>, exploring role-based framing as a possible soft-alignment mechanism for agent interactions.
+                </div>
             </div>
-            
+
             <div class="question-block">
                 <div class="question-label">Main Research Question</div>
                 <div class="question-text">
@@ -322,6 +149,8 @@
                 </div>
             </div>
 
+            <!-- ADD BACK the divider before Data & Analysis -->
+            <div class="section-sep"></div>
             <div class="two-col-section">
                 <div class="section-label">Data & Analysis</div>
                 <div class="section-body">
@@ -329,7 +158,7 @@
                 </div>
             </div>
             
-            <!-- keep separator before theoretical section, but not inside it -->
+            <!-- keep divider before theoretical section -->
             <div class="section-sep"></div>
             <div class="two-col-section tight-bottom">
                 <div class="section-label">Theoretical Grounding</div>
