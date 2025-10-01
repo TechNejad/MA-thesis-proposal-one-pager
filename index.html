@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Playing the Part - Thesis One-Pager</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
@@ -11,6 +14,12 @@
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             background: #fafafa;
             color: #1a1a1a;
+            animation: fadeIn 0.6s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
         
         .container { max-width: 900px; margin: 0 auto; background: #fff; }
@@ -18,30 +27,69 @@
         .hero {
             background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
             color: #fff; padding: 60px 50px 50px;
+            position: relative;
+            overflow: hidden;
         }
-        .title { font-size: 2.8em; font-weight: 700; line-height: 1.15; margin-bottom: 16px; letter-spacing: -0.02em; }
-        .subtitle { font-size: 0.92em; color: #9b8b7e; font-style: italic; font-weight: 400; letter-spacing: 0.02em; }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 10px,
+                rgba(255,255,255,0.01) 10px,
+                rgba(255,255,255,0.01) 20px
+            );
+            pointer-events: none;
+        }
+        .title { font-size: 2.8em; font-weight: 800; line-height: 1.15; margin-bottom: 16px; letter-spacing: -0.02em; font-family: 'Playfair Display', serif; position: relative; z-index: 1; }
+        .subtitle { font-size: 0.92em; color: #9b8b7e; font-style: italic; font-weight: 400; letter-spacing: 0.02em; position: relative; z-index: 1; }
         
         .content { padding: 50px; }
 
         .intro { font-size: 1.1em; line-height: 1.7; color: #2d2d2d; }
         
         .question-block {
-            background: #f8f8f8; padding: 28px 40px; margin: 45px 0; border-left: 4px solid #2d2d2d;
+            background: #f8f8f8; padding: 28px 40px; margin: 45px 0; border-left: 4px solid #C2410C;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .question-block:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(194,65,12,0.1);
         }
         .question-label {
             font-size: 0.95em; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #C2410C; margin-bottom: 12px;
         }
         .question-text { font-size: 1.05em; font-style: italic; line-height: 1.5; color: #1a1a1a; }
         
-        .two-col-section { display: flex; flex-direction: column; gap: 16px; margin-bottom: 20px; }
+        .two-col-section { display: flex; flex-direction: column; gap: 16px; margin-bottom: 32px; }
         .section-label {
             font-size: 0.95em; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #C2410C; margin-bottom: 6px;
         }
         .section-body { font-size: 0.98em; line-height: 1.75; color: #333; }
         
         .roles-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin: 24px 0; }
-        .role-card { background: #fafafa; padding: 20px; border-radius: 2px; }
+        .role-card { 
+            background: #fafafa; 
+            padding: 20px; 
+            border-radius: 4px;
+            border: 1px solid #e6e6e6;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .role-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+            border-color: #C2410C;
+            background: #fff;
+        }
         .role-title { font-weight: 700; color: #1a1a1a; margin-bottom: 8px; font-size: 0.95em; }
         .role-desc { font-size: 0.88em; color: #666; line-height: 1.5; }
         
@@ -66,11 +114,29 @@
         .author-details { font-size: 0.9em; color: #666; line-height: 1.6; }
         .links { display: flex; flex-direction: column; gap: 10px; align-items: flex-end; }
         .link-item { font-size: 0.9em; }
-        .link-item a { color: #1a1a1a; text-decoration: none; border-bottom: 2px solid #2d2d2d; padding-bottom: 2px; transition: opacity 0.2s; }
-        .link-item a:hover { opacity: 0.6; }
+        .link-item a { 
+            color: #1a1a1a; 
+            text-decoration: none; 
+            border-bottom: 2px solid #C2410C; 
+            padding-bottom: 2px; 
+            transition: all 0.2s ease;
+        }
+        .link-item a:hover { 
+            color: #C2410C;
+            border-bottom-color: transparent;
+            transform: translateY(-1px);
+        }
         .contact-links { font-size: 0.88em; color: #666; }
-        .contact-links a { color: #1a1a1a; text-decoration: none; border-bottom: 1px solid #999; }
-        .contact-links a:hover { opacity: 0.6; }
+        .contact-links a { 
+            color: #1a1a1a; 
+            text-decoration: none; 
+            border-bottom: 1px solid #999;
+            transition: all 0.2s ease;
+        }
+        .contact-links a:hover { 
+            color: #C2410C;
+            border-bottom-color: #C2410C;
+        }
         
         @media (max-width: 768px) {
             .hero, .content, .contributions, .footer { padding: 40px 30px; }
