@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Playing the Part - Thesis One-Pager</title>
+    <title>Simulated Norms - Thesis One-Pager</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
@@ -15,7 +15,7 @@
             background: #fafafa url('https://i.imgur.com/YourImageURL.jpg') center/cover fixed;
             color: #1a1a1a;
             animation: fadeIn 0.6s ease-in;
-            padding: 40px 20px;
+            padding: 30px 20px;
         }
         
         @keyframes fadeIn {
@@ -34,7 +34,7 @@
         
         .hero {
             background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
-            color: #fff; padding: 60px 50px 50px;
+            color: #fff; padding: 50px 50px 40px;
             position: relative;
             overflow: hidden;
         }
@@ -55,15 +55,15 @@
             );
             pointer-events: none;
         }
-        .title { font-size: 2.8em; font-weight: 800; line-height: 1.15; margin-bottom: 16px; letter-spacing: -0.02em; font-family: 'Playfair Display', serif; position: relative; z-index: 1; }
+        .title { font-size: 2.3em; font-weight: 700; line-height: 1.2; margin-bottom: 12px; letter-spacing: -0.01em; font-family: 'Playfair Display', serif; position: relative; z-index: 1; }
         .subtitle { font-size: 0.92em; color: #9b8b7e; font-style: italic; font-weight: 400; letter-spacing: 0.02em; position: relative; z-index: 1; }
         
-        .content { padding: 50px; }
+        .content { padding: 40px 50px; }
 
         .intro { font-size: 1.1em; line-height: 1.7; color: #2d2d2d; }
         
         .question-block {
-            background: #f8f8f8; padding: 28px 40px; margin: 45px 0; border-left: 4px solid #C2410C;
+            background: #f8f8f8; padding: 24px 40px; margin: 28px 0; border-left: 4px solid #C2410C;
             box-shadow: 0 2px 8px rgba(0,0,0,0.04);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
@@ -77,14 +77,14 @@
         }
         .question-text { font-size: 1.05em; font-style: italic; line-height: 1.5; color: #1a1a1a; }
         
-        .two-col-section { display: flex; flex-direction: column; gap: 16px; margin-bottom: 32px; }
+        .two-col-section { display: flex; flex-direction: column; gap: 8px; margin-bottom: 28px; }
         .section-label {
-            font-size: 1.05em; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #C2410C; margin-bottom: 6px;
+            font-size: 1.05em; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #C2410C; margin-bottom: 10px;
         }
         .section-body { font-size: 0.98em; line-height: 1.75; color: #333; }
         
-        .roles-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin: 24px 0; }
-        .role-card { 
+        .mechanisms-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin: 18px 0; }
+        .mechanism-card { 
             background: #fafafa; 
             padding: 20px; 
             border-radius: 4px;
@@ -92,31 +92,31 @@
             transition: all 0.3s ease;
             cursor: pointer;
         }
-        .role-card:hover {
+        .mechanism-card:hover {
             transform: translateY(-4px);
             box-shadow: 0 8px 16px rgba(0,0,0,0.08);
             border-color: #C2410C;
             background: #fff;
         }
-        .role-title { font-weight: 700; color: #1a1a1a; margin-bottom: 8px; font-size: 0.95em; }
-        .role-desc { font-size: 0.88em; color: #666; line-height: 1.5; }
+        .mechanism-title { font-weight: 700; color: #1a1a1a; margin-bottom: 8px; font-size: 0.95em; }
+        .mechanism-desc { font-size: 0.88em; color: #666; line-height: 1.5; }
         
-        .design-note { font-size: 0.92em; color: #666; margin-top: 20px; font-style: italic; }
+        .design-note { font-size: 0.92em; color: #666; margin-top: 16px; font-style: italic; }
         
-        .theory-list { display: grid; gap: 8px; }
+        .theory-list { display: grid; gap: 10px; }
         .theory-item { display: flex; gap: 12px; }
         .theory-bullet { width: 6px; height: 6px; background: #2d2d2d; border-radius: 50%; margin-top: 10px; flex-shrink: 0; }
         .theory-content { flex: 1; }
         .theory-title { font-weight: 700; color: #1a1a1a; display: inline; }
         .theory-text  { color: #333; display: inline; line-height: 1.7; }
         
-        .contributions { background: #2d2d2d; color: #fff; padding: 40px 50px; margin-top: 15px; }
-        .contributions-title { font-size: 0.95em; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; opacity: 0.7; margin-bottom: 20px; }
-        .contributions-text { font-size: 1.05em; line-height: 1.7; margin-bottom: 28px; }
+        .contributions { background: #2d2d2d; color: #fff; padding: 35px 50px; margin-top: 0; }
+        .contributions-title { font-size: 0.95em; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; opacity: 0.7; margin-bottom: 16px; }
+        .contributions-text { font-size: 1.05em; line-height: 1.7; margin-bottom: 24px; }
         .deliverables { font-size: 0.9em; opacity: 0.75; line-height: 1.6; }
         .deliverables strong { opacity: 1; font-weight: 600; }
         
-        .footer { background: #fafafa; padding: 40px 50px; display: flex; justify-content: space-between; align-items: center; }
+        .footer { background: #fafafa; padding: 35px 50px; display: flex; justify-content: space-between; align-items: center; }
         .author-block { flex: 1; }
         .author-name { font-size: 1.05em; font-weight: 700; color: #1a1a1a; margin-bottom: 8px; }
         .author-details { font-size: 0.9em; color: #666; line-height: 1.6; }
@@ -147,9 +147,9 @@
         }
         
         @media (max-width: 768px) {
-            .hero, .content, .contributions, .footer { padding: 40px 30px; }
-            .two-col-section { display: flex; flex-direction: column; gap: 16px; margin-bottom: 20px; }
-            .roles-grid { grid-template-columns: 1fr; }
+            .hero, .content, .contributions, .footer { padding: 35px 30px; }
+            .two-col-section { display: flex; flex-direction: column; gap: 16px; margin-bottom: 18px; }
+            .mechanisms-grid { grid-template-columns: 1fr; }
             .footer { flex-direction: column; align-items: flex-start; gap: 25px; }
             .links { align-items: flex-start; }
         }
@@ -159,112 +159,134 @@
             .hero { background: #2d2d2d; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
         }
 
-        .section-sep { border-top: 1px solid #e6e6e6; margin: 24px 0; }
+        .section-sep { border-top: 1px solid #e6e6e6; margin: 32px 0 24px 0; }
 
-        .question-block { margin-top: 12px !important; margin-bottom: 24px !important; }
-        
         h1, h2, h3, h4 { margin-top: 0.6em; margin-bottom: 0.4em; }
         p { margin-top: 0.4em; margin-bottom: 0.6em; }
         ul, ol { margin-top: 0.4em; margin-bottom: 0.6em; }
-        .tight-bottom { margin-bottom: 8px !important; }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="hero">
-            <div class="title">Playing the Part: How Role Specifications Shape LLM Agent Interactions</div>
-            <div class="subtitle">Work-in-progress master's thesis proposal</div>
+            <div class="title">Simulated Norms: The Fragile Business of Prompt Engineering Ethical Norms in Multi-Agent LLM Systems</div>
+            <div class="subtitle">Work-in-progress master's thesis</div>
         </div>
         
         <div class="content">
             <div class="two-col-section">
-                <div class="section-label">Summary of the Idea</div>
+                <div class="section-label">The Central Problem</div>
                 <div class="section-body">
-                     This thesis investigates whether we can rely on Role Specifications to shape how LLM agents interact in mixed-motive settings. Role Specifications are structured behavioral framings (persona, goals, norms, tactics, pressures) inspired by Game Theoretical strategies and Ostrom's resource governance principles. 
-                     <br><br>
-                     <strong>Why This Matters?</strong><br>
-                     As LLM agents rapidly integrate into our socio-technical systems, their interactions with millions of humans and other agents create novel systemic risks, exacerbated by the opacity of their architectures and our limited capacity to interpret or predict their behavior.
-                     <br><br>
-                     The aim is to study Role Specifications as a potential soft-control mechanism for fostering prosocial behavior in multi-agent systems, and to offer practical, easy-to-implement insights for users, researchers, developers, and policymakers.
+                     Normative role design for LLMs is happening through rapid, unsystematic, and haphazard prompt programming. Developers, researchers, and systems designers are embedding ethical assumptions into agents' roles through trial-and-error, focusing on outcomes rather than ethical coherence.
+                </div>
+            </div>
+
+            <div class="two-col-section">
+                <div class="section-label">Why it Matters</div>
+                <div class="section-body">
+                     <ol style="margin-left: 20px; line-height: 1.8;">
+                         <li>AI agents are being deployed in real-world systems: energy grids, supply chains, healthcare, and education.</li>
+                         <li>Our design choices, how we encode ethical norms, directly influence their decisions and societal impact.</li>
+                         <li>Scale matters: These systems operate at massive levels, affecting millions of users and critical infrastructures.</li>
+                     </ol>
                 </div>
             </div>
 
             <div class="question-block">
                 <div class="question-label">Main Research Question</div>
                 <div class="question-text">
-                    How do Role Specifications influence cooperation, communication, and adaptation dynamics among LLM agents in a repeated water-sharing dilemma, and where do they fall short?
+                    How are ethical norms encoded into agents across different applications of Multi-Agent Systems, and what are their socio technical implications?
                 </div>
             </div>
             
             <div class="two-col-section">
-                <div class="section-label">Research Methods</div>
+                <div class="section-label">Research Approach</div>
                 <div class="section-body">
-                    This research adopts a <strong>mixed-methods exploratory approach</strong> to studying how LLM agents interact. The study utilises an <strong>Iterated Prisoner's Dilemma</strong> in which two agents negotiate monthly water allocations for their neighboring cities during drought, choosing to cooperate (fair split) or defect (over-draw). Before each allocation decision, agents enter a negotiation phase with assigned roles.
-                    
-                    <div class="design-note" style="margin-bottom: 20px; margin-top: 20px;"><strong style="font-style: normal;">Role specifications tested:</strong></div>
-                    <div class="roles-grid">
-                        <div class="role-card">
-                            <div class="role-title">Sustainability Officer</div>
-                            <div class="role-desc">norm-enforcement, long-termism</div>
-                        </div>
-                        <div class="role-card">
-                            <div class="role-title">City Growth Planner</div>
-                            <div class="role-desc">demand-driven, short-term pressure</div>
-                        </div>
-                        <div class="role-card">
-                            <div class="role-title">Security Commissioner</div>
-                            <div class="role-desc">risk-averse, graduated sanctions</div>
-                        </div>
-                    </div>
-                    
-                    <div class="design-note" style="margin-bottom: 16px;">
-                        These are only summaries, not the complete Role Specifications.
-                    </div>
-
-                    <strong>Data collection and analysis:</strong> Full negotiation transcripts tagged for persuasion tactics, defection signals, and role adherence/drift · Payoff metrics tracking cooperation frequency and distributions · Post-simulation agent interviews · <strong>Qualitative Comparative Analysis (QCA)</strong> comparing role pairings to identify conditions that foster cooperation, conflict, or miscommunication · Quantitative analyses of persuasion success rates and stability of cooperation over time.
+                    <strong>Design:</strong> Structured Thematic Analysis
+                    <br><br>
+                    <strong>Data:</strong> Research papers (methods, claims, evaluation techniques) and their code repositories (system prompts and agent role specifications).
+                    <br><br>
+                    <strong>Process:</strong>
+                    <ol style="margin-left: 20px; line-height: 1.8;">
+                        <li><strong>Initial Coding:</strong> Code papers based on key dimensions.</li>
+                        <li><strong>Theme Formation:</strong> Cluster codes into overarching themes.</li>
+                        <li><strong>In-Depth Analysis:</strong> Analyze each theme using individual papers as concrete examples.</li>
+                        <li><strong>Synthesis:</strong> Identify connections and tensions to answer the research question.</li>
+                    </ol>
                 </div>
             </div>
             
             <div class="section-sep"></div>
-            <div class="two-col-section tight-bottom">
-                <div class="section-label">Theoretical Grounding</div>
+            <div class="two-col-section">
+                <div class="section-label">Theoretical Framework</div>
                 <div class="section-body">
+                    <div class="design-note" style="margin-top: 0; margin-bottom: 18px;"><strong style="font-style: normal;">Three normative ethical theories guide the analysis:</strong></div>
+                    <div class="mechanisms-grid">
+                        <div class="mechanism-card">
+                            <div class="mechanism-title">Deontological</div>
+                            <div class="mechanism-desc">rules, duties, obligations</div>
+                        </div>
+                        <div class="mechanism-card">
+                            <div class="mechanism-title">Consequentialist</div>
+                            <div class="mechanism-desc">outcomes, utility, optimization</div>
+                        </div>
+                        <div class="mechanism-card">
+                            <div class="mechanism-title">Virtue Ethics</div>
+                            <div class="mechanism-desc">character traits, social roles</div>
+                        </div>
+                    </div>
+                    
+                    <div class="design-note" style="margin-top: 18px; margin-bottom: 0;">
+                        <em>Based on Woodgate & Ajmeri (2024), Macro Ethics Principles for Responsible AI Systems</em>
+                    </div>
+                </div>
+            </div>
+
+            <div class="two-col-section">
+                <div class="section-label">Analytical Framework</div>
+                <div class="section-body">
+                    <div class="design-note" style="margin-top: 0; margin-bottom: 16px;"><strong style="font-style: normal;">Papers will be systematically coded across multiple dimensions:</strong></div>
+                    
                     <div class="theory-list">
                         <div class="theory-item">
                             <div class="theory-bullet"></div>
                             <div class="theory-content">
-                                <span class="theory-title">Game Theory</span>
-                                <span class="theory-text">— Iterated Prisoner's Dilemma with cheap talk; test role effects on strategy and payoffs under Axelrod-style archetypes and varying horizons.</span>
+                                <span class="theory-title">Ethical Framework Classification</span>
+                                <span class="theory-text">— Which of the three ethical theories (deontological, consequentialist, virtue ethics) are invoked in agent design?</span>
                             </div>
                         </div>
                         <div class="theory-item">
                             <div class="theory-bullet"></div>
                             <div class="theory-content">
-                                <span class="theory-title">Dialogue Theory</span>
-                                <span class="theory-text">— Model norms, commitments, and persuasion as mechanisms that mediate negotiation outcomes.</span>
+                                <span class="theory-title">Normative Mechanisms</span>
+                                <span class="theory-text">— What types of mechanisms (fairness, reciprocity, rights, duties) are embedded in agent roles?</span>
                             </div>
                         </div>
                         <div class="theory-item">
                             <div class="theory-bullet"></div>
                             <div class="theory-content">
-                                <span class="theory-title">Symbolic Interactionism</span>
-                                <span class="theory-text">— Treat roles as performed rather than fixed; analyze adherence vs. drift under pressure.</span>
+                                <span class="theory-title">Evaluation Strategies</span>
+                                <span class="theory-text">— How do researchers assess normative behavior in their experiments?</span>
                             </div>
                         </div>
                         <div class="theory-item">
                             <div class="theory-bullet"></div>
                             <div class="theory-content">
-                                <span class="theory-title">Commons Governance (Ostrom)</span>
-                                <span class="theory-text">— Encode monitoring, reciprocity, fit to local needs, and graduated sanctions as role priors.</span>
+                                <span class="theory-title">Domain-Specific Patterns</span>
+                                <span class="theory-text">— How does the simulation domain (negotiation, resource allocation, governance) influence normative design choices?</span>
                             </div>
                         </div>
                         <div class="theory-item">
                             <div class="theory-bullet"></div>
                             <div class="theory-content">
-                                <span class="theory-title">Alignment via Soft Control</span>
-                                <span class="theory-text">— Evaluate role specifications as lightweight, interpretable levers for prosocial multi-agent behavior.</span>
+                                <span class="theory-title">Gaps and Tensions</span>
+                                <span class="theory-text">— What inconsistencies exist between researchers' claims and their methods?</span>
                             </div>
                         </div>
+                    </div>
+                    
+                    <div class="design-note" style="margin-top: 18px; margin-bottom: 0; font-style: italic;">
+                        These dimensions provide initial structure, but the framework remains open to emergent patterns and additional criteria discovered during iterative coding.
                     </div>
                 </div>
             </div>
@@ -273,10 +295,10 @@
         <div class="contributions">
             <div class="contributions-title">Expected Contribution</div>
             <div class="contributions-text">
-                Introduces Role Specifications as a testable independent variable in multi-agent LLM research · Provides empirical evidence on how role framing affects cooperation, persuasion, and adaptation · Offers practical guidance for designing prosocial, interpretable agent societies
+                Typology of normative design patterns · Evidence-based guidelines for encoding ethics · Risk identification for AI governance · Practical insights for developers and policymakers
             </div>
             <div class="deliverables">
-                <strong>Deliverables:</strong> Thesis paper · Open-source code · Policy briefs · Academic posters · Role-spec templates · Dataset & transcripts
+                <strong>Deliverables:</strong> Thesis · Briefs · Conference papers · Workshops · Design taxonomy
             </div>
         </div>
 
@@ -290,7 +312,7 @@
             </div>
             <div class="links">
                 <div class="link-item">
-                    <a href="https://docs.google.com/document/d/13HdbxagbMUa5Y8iukpybiEJUAIF-IcdyL_gDgcrTJss/edit?tab=t.0">Full Detailed Proposal</a>
+                    <a href="https://github.com/TechNejad">GitHub</a>
                 </div>
                 <div class="contact-links">
                     <a href="mailto:mohsen.nejad94@gmail.com">Email</a> · 
