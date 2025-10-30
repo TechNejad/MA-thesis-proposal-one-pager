@@ -33,7 +33,7 @@
         }
         
         .hero {
-            background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+            background: #140b22;
             color: #fff; padding: 50px 50px 40px;
             position: relative;
             overflow: hidden;
@@ -56,30 +56,30 @@
             pointer-events: none;
         }
         .title { font-size: 2.3em; font-weight: 700; line-height: 1.2; margin-bottom: 12px; letter-spacing: -0.01em; font-family: 'Playfair Display', serif; position: relative; z-index: 1; }
-        .subtitle { font-size: 0.92em; color: #9b8b7e; font-style: italic; font-weight: 400; letter-spacing: 0.02em; position: relative; z-index: 1; }
+        .subtitle { font-size: 0.92em; color: #d4c5f9; font-style: italic; font-weight: 400; letter-spacing: 0.02em; position: relative; z-index: 1; }
         
         .content { padding: 40px 50px; }
 
         .intro { font-size: 1.1em; line-height: 1.7; color: #2d2d2d; }
         
         .question-block {
-            background: #f8f8f8; padding: 24px 40px; margin: 28px 0; border-left: 4px solid #C2410C;
+            background: #f8f8f8; padding: 24px 40px; margin: 28px 0; border-left: 4px solid #140b22;
             box-shadow: 0 2px 8px rgba(0,0,0,0.04);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         
         .question-block:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(194,65,12,0.1);
+            box-shadow: 0 4px 12px rgba(20,11,34,0.15);
         }
         .question-label {
-            font-size: 1.05em; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #C2410C; margin-bottom: 12px;
+            font-size: 1.05em; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #140b22; margin-bottom: 12px;
         }
         .question-text { font-size: 1.05em; font-style: italic; line-height: 1.5; color: #1a1a1a; }
         
         .two-col-section { display: flex; flex-direction: column; gap: 8px; margin-bottom: 28px; }
         .section-label {
-            font-size: 1.05em; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #C2410C; margin-bottom: 10px;
+            font-size: 1.05em; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #140b22; margin-bottom: 10px;
         }
         .section-body { font-size: 0.98em; line-height: 1.75; color: #333; }
         
@@ -95,7 +95,7 @@
         .mechanism-card:hover {
             transform: translateY(-4px);
             box-shadow: 0 8px 16px rgba(0,0,0,0.08);
-            border-color: #C2410C;
+            border-color: #140b22;
             background: #fff;
         }
         .mechanism-title { font-weight: 700; color: #1a1a1a; margin-bottom: 8px; font-size: 0.95em; }
@@ -105,12 +105,12 @@
         
         .theory-list { display: grid; gap: 10px; }
         .theory-item { display: flex; gap: 12px; }
-        .theory-bullet { width: 6px; height: 6px; background: #2d2d2d; border-radius: 50%; margin-top: 10px; flex-shrink: 0; }
+        .theory-bullet { width: 6px; height: 6px; background: #140b22; border-radius: 50%; margin-top: 10px; flex-shrink: 0; }
         .theory-content { flex: 1; }
         .theory-title { font-weight: 700; color: #1a1a1a; display: inline; }
         .theory-text  { color: #333; display: inline; line-height: 1.7; }
         
-        .contributions { background: #2d2d2d; color: #fff; padding: 35px 50px; margin-top: 0; }
+        .contributions { background: #140b22; color: #fff; padding: 35px 50px; margin-top: 0; }
         .contributions-title { font-size: 0.95em; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; opacity: 0.7; margin-bottom: 16px; }
         .contributions-text { font-size: 1.05em; line-height: 1.7; margin-bottom: 24px; }
         .deliverables { font-size: 0.9em; opacity: 0.75; line-height: 1.6; }
@@ -125,12 +125,12 @@
         .link-item a { 
             color: #1a1a1a; 
             text-decoration: none; 
-            border-bottom: 2px solid #C2410C; 
+            border-bottom: 2px solid #140b22; 
             padding-bottom: 2px; 
             transition: all 0.2s ease;
         }
         .link-item a:hover { 
-            color: #C2410C;
+            color: #140b22;
             border-bottom-color: transparent;
             transform: translateY(-1px);
         }
@@ -142,8 +142,8 @@
             transition: all 0.2s ease;
         }
         .contact-links a:hover { 
-            color: #C2410C;
-            border-bottom-color: #C2410C;
+            color: #140b22;
+            border-bottom-color: #140b22;
         }
         
         @media (max-width: 768px) {
@@ -156,7 +156,7 @@
         
         @media print {
             body { background: #fff; }
-            .hero { background: #2d2d2d; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            .hero { background: #140b22; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
         }
 
         .section-sep { border-top: 1px solid #e6e6e6; margin: 32px 0 24px 0; }
@@ -177,7 +177,7 @@
             <div class="two-col-section">
                 <div class="section-label">The Central Problem</div>
                 <div class="section-body">
-                     Normative role design for LLMs is happening through rapid, unsystematic, and haphazard prompt programming. Developers, researchers, and systems designers are embedding ethical assumptions into agents' roles through trial-and-error, focusing on outcomes rather than ethical coherence.
+                     Normative role design for LLMs is happening through rapid, unsystematic, and haphazard prompt programming. Developers, researchers, and systems designers are embedding ethical assumptions into agents' roles through trial-and-error, often focusing on outcomes rather than ethical coherence.
                 </div>
             </div>
 
